@@ -1,0 +1,30 @@
+<!-- Nav bar -->
+<mat-toolbar color="accent" class="toolbar">
+    <h1>Registration Form</h1>             
+</mat-toolbar>
+<!-- Registration Form -->
+<mat-card class="card">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">    
+        <mat-input-container style="width: 100%">
+            <input style="width: 100%" [ngClass]="{'error': isValid('firstName')}" matInput placeholder="First Name" formControlName="firstName">
+        </mat-input-container> 
+        <mat-input-container style="width: 100%">
+            <input style="width: 100%" [ngClass]="{'error': isValid('lastName')}" matInput placeholder="Last Name" formControlName="lastName">
+        </mat-input-container>   
+        <mat-input-container style="width:  100%">
+            <input style="width: 100%" type="email" [ngClass]="{'error': isValid('email')}" matInput placeholder="Email" formControlName="email">
+        </mat-input-container>
+        <mat-input-container style="width: 100%">
+            <input style="width: 100%" type="password" [ngClass]="{'error': isValid('password')}" matInput placeholder="Password" formControlName="password">
+        </mat-input-container> 
+        <mat-input-container style="width:  100%">
+            <input style="width: 100%" type="password" [ngClass]="{'error': isValid('confirmPassword')}" matInput placeholder="Confirm Password" formControlName="confirmPassword">
+        </mat-input-container>
+        <br>
+        <span *ngIf='form.errors?.mismatchedFields'>Passwords do not match</span>
+        <br>
+        <br>
+        <button mat-raised-button color="accent">Register</button> 
+        <button mat-button routerLink="/login" type="button">Want to login?</button>
+      </form>
+  </mat-card>

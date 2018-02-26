@@ -1,0 +1,73 @@
+    <ngui-map zoom="11" center="Lagos, Nigeria">
+        <marker *ngFor="let place of places" 
+          (click)="showInfoWindow($event)"
+          [position]="[place.location_latitude, place.location_longitude]"></marker>
+    </ngui-map>
+
+    <div class="{{slideControl}}">
+    <div class="b-slide-menu__toggle" (click)="toggleSlide()"><i class="{{carretControl}} " aria-hidden="true"></i><i
+        class="fa fa-caret-right hidden" aria-hidden="true"></i></div>
+<div class="b-slide-menu__content custom-scroll default-skin">
+
+<h2 class="b-slide-menu__title">
+    
+</h2>
+    <form action="#" method="get" class="b-slide-menu__form container-fluid opened">
+                          
+        <div class="b-slide-menu__form__row row">
+         
+             <div class="col-md-12">
+                <div class="b-slide-menu__form__row__item">
+                    <select name="qs" style="border: 1px solid grey">
+                    <option>Select a Location</option>
+                      <option value="volvo">Victoria Island</option>
+                      <option value="saab">Gbagada</option>
+                      <option value="fiat">Ikeja</option>
+                      <option value="audi">Ikoyi</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="b-slide-menu__form__row row">
+         
+            <div class="col-md-12">
+                <div class="b-slide-menu__form__row__item">
+                    <select name="qs" style="border: 1px solid grey">
+                    <option>Select a Category</option>
+                      <option>Cinema</option>
+                      <option>Entertainment</option>
+                      <option>Hotels</option>
+                      <option>Nightlife</option>
+                      <option>Restaurants</option>
+                      <option>Shopping</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    
+    <div class="b-slide-menu__row clearfix">
+        <div class="btn btn-primary" (click)="applyFilter()" style="backround-color: #351521">
+                Apply Filter
+            </div>
+        <div class="b-slide-menu__pages-num press--right"> 1-8 of 28</div>
+    </div>
+</div>
+
+<div class="col-md-12 placesWrapper">
+      <mat-card _ngcontent-c2="" class="p-0 mat-card z-depth placesList" *ngFor="let place of places">
+        <img _ngcontent-c2="" class="mat-card-image" mat-card-image="" src="{{place.imageUrl}}">
+        <mat-card-content _ngcontent-c2="" class="mat-card-content">
+          <h5 _ngcontent-c2=""><strong _ngcontent-c2=""><a _ngcontent-c2="" href="">{{place.name}}</a></strong>
+            <mat-divider _ngcontent-c2="" aria-orientation="horizontal" class="mb-1 mat-divider" role="separator"></mat-divider>
+          </h5>
+          <p _ngcontent-c2="">
+            {{place.address}}
+          </p>
+       
+          <!-- <button _ngcontent-c2="" class="mat-icon-button" mat-icon-button=""><span class="mat-button-wrapper"><mat-icon _ngcontent-c2="" class="text-muted mat-icon material-icons" role="img" aria-hidden="true">link</mat-icon></span><div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""></div><div class="mat-button-focus-overlay"></div></button>
+          <button _ngcontent-c2="" class="mat-icon-button" mat-icon-button=""><span class="mat-button-wrapper"><mat-icon _ngcontent-c2="" class="text-muted mat-icon material-icons" role="img" aria-hidden="true">share</mat-icon></span><div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""></div><div class="mat-button-focus-overlay"></div></button> -->
+        </mat-card-content>
+    </mat-card>
+</div>

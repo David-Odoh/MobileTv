@@ -1,0 +1,34 @@
+.noScroll {
+    /* position: relative; */
+    overflow: hidden !important;
+    margin: 0;
+    padding: 0;
+    text-align:center;
+    width:100%;  
+    height: 100%;
+    /* overflow: auto; */
+}
+
+/* .container {
+    -ms-overflow-style: none;  
+    overflow: -moz-scrollbars-none;  
+}
+.container::-webkit-scrollbar { 
+    display: none; 
+} */
+
+#parent{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#child{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: -17px; /* Increase/Decrease this value for cross-browser compatibility */
+    overflow-y: scroll;
+}

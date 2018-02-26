@@ -1,0 +1,56 @@
+.main-nav{
+    padding:0;
+	margin:0;
+	height:7%;
+	width:100%;
+    overflow:hidden;
+}
+
+/deep/ .mat-menu-content {
+	padding-top: 0px !important;
+    padding-bottom: 0px !important;
+  }
+
+.drop-down {
+	background-color:#642b40;
+	color:#fd7d70
+}
+
+.drop-down:hover {
+	background-color:#fd7d70;
+	color:#642b40;
+}
+
+.divider, #icon-style1, #icon-style2, #icon-style3  {
+	color:#fd7d70;
+}
+
+.divider:hover, #icon-style1:hover, #icon-style2:hover, #icon-style3:hover {
+	color:#542436;
+}
+
+#divider {
+	background-color:#fd7d70;
+	color:#fd7d70;
+}
+
+#divider:hover {
+	background-color:#642b40;
+	color:#542436;
+}
+
+
+/deep/ .mat-menu-panel {
+    min-width: 150px;
+    max-width: 400px;
+    overflow: auto;
+    max-height: calc(100vh - 48px);
+    border-radius: 2px;
+    outline: 0;
+}
+
+/* Over riding Submenu Carret Style */
+
+/deep/ .mat-menu-item .mat-icon:not([color]), .mat-menu-item-submenu-trigger::after {
+	color: #fd7d70;
+}

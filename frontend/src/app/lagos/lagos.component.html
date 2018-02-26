@@ -1,0 +1,72 @@
+<mat-toolbar color="accent">
+    <!-- <button mat-button> Leave your comments</button>   -->
+    <button mat-button> All comments</button>
+    <span style="flex: 1 1 auto"></span>
+    <button mat-button *ngIf="auth.isAuthenticated"> Welcome Back {{auth.name}}!</button>    
+    <button mat-button *ngIf="auth.isAuthenticated" (click)="auth.logout()"> Logout</button>      
+</mat-toolbar>
+<div>
+        <img  src="../assets/images/nav-elements/Aiico.png" alt="Aiico" style="width:100%; height:100%"> 
+</div>
+<div style="padding-left: 20px; color:gray">
+<h1><strong>All Comments</strong></h1>
+</div>
+
+<div>
+<mat-card class="card">
+    <mat-list>
+        <mat-list-item style="cursor: pointer">
+        <img mat-list-avatar src="../assets/images/nav-elements/places/escape.png" alt="Escape" style="border: 1px solid blue; width:60px; height:60px">
+            <h3 mat-line><strong>@adoabi_official</strong></h3>
+                <p mat-line>
+                        <span>I totally love this city... the traffic tho :(</span>
+                </p>
+    </mat-list-item>
+</mat-list>
+    </mat-card>
+
+    <mat-card class="card">
+            <mat-list>
+                <mat-list-item style="cursor: pointer">
+                <img mat-list-avatar src="../assets/images/nav-elements/places/zaaz.png" alt="Zaaz" style="border: 1px solid blue; width:60px; height:60px">
+                    <h3 mat-line><strong>@i_am_henry</strong></h3>
+                        <p mat-line>
+                                <span>Thanks to everyone who made today so much fun. You guys are LIT!!</span>
+                        </p>
+            </mat-list-item>
+        </mat-list>
+            </mat-card>
+</div>
+ 
+
+ 
+     
+
+
+<!-- <mat-card>
+    <mat-list>
+      <mat-list-item>
+        <img mat-list-avatar src="../assets/images/nav-elements/places/utazi.png" alt="Unix">
+        <h3 mat-line>Food & Drinks</h3>
+        <p mat-line>
+          <span>Most visitors prefer to visit Unix Restaurant</span>
+        </p>
+      </mat-list-item>
+  
+      <mat-list-item>
+        <img mat-list-avatar src="../assets/images/nav-elements/places/escape.png" alt="Escape">
+        <h3 mat-line>Night Life</h3>
+        <p mat-line>
+          <span>Most visitors prefer to visit Escape club at night</span>
+        </p>
+      </mat-list-item>
+  
+      <mat-list-item>
+        <img mat-list-avatar src="../assets/images/nav-elements/places/zaaz.png" alt="Zaaz">
+        <h3 mat-line>Hotel</h3>
+        <p mat-line>
+          <span>Most visitors prefer to visit Zaaz hotel</span>
+        </p>
+      </mat-list-item>
+    </mat-list>
+</mat-card> -->

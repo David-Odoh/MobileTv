@@ -1,0 +1,13 @@
+<div *ngFor="let video of  videoservice.videosOBS | async">
+    <mat-card class="card">
+      <mat-card-title [routerLink]="['/manage-videos', video.id]" style="cursor: pointer;">
+         {{video.category}}
+      </mat-card-title>
+      <mat-card-content>
+         <strong>Video Url:</strong>
+         {{video.videoUrl}}     
+      </mat-card-content>
+      <span style="flex: 1 1 auto"></span>
+      <button mat-raised-button color="accent" (click)="delete(video.id)">Delete</button>
+    </mat-card>
+</div>

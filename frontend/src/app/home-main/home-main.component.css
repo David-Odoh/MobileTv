@@ -1,0 +1,15 @@
+.wide {
+    background-color:#000; 
+    width:100%;
+    margin: 0;
+    padding: 0;
+    top: 0;
+}
+
+.videoContainer 
+{
+    position: relative;
+     overflow: hidden !important;
+    padding: 10px;
+    overflow: hidden;
+}

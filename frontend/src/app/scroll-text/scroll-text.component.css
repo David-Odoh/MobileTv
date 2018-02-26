@@ -1,0 +1,18 @@
+ /* Scroll Text*/
+
+ .scrollText {
+    font-size:140%;
+    color:#FFF;
+    z-index: 1200;
+    background-color: #000000
+    }
+ 
+
+ @media only screen and (max-width:1000px){
+   
+   .scrollText{font-size:140%;}
+ }
+ @media only screen and (max-width:600px){
+   
+   .scrollText{font-size:140%;}
+ }

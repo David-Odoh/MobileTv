@@ -1,0 +1,17 @@
+<!-- Nav bar -->
+<mat-toolbar color="accent" class="toolbar">
+    <h1>Login Form</h1>             
+</mat-toolbar>
+<!-- Registration Form -->
+<mat-card class="card">
+        <mat-input-container style="width:  100%">
+            <input style="width: 100%" type="email" [(ngModel)]="loginData.email" matInput placeholder="Email" >
+        </mat-input-container>
+        <mat-input-container style="width: 100%">
+            <input style="width: 100%" type="password" [(ngModel)]="loginData.password" matInput placeholder="Password">
+        </mat-input-container> 
+        <br>
+        <br>
+        <button mat-raised-button color="accent" (click)="login()">Login</button> 
+        <button mat-button routerLink="/register" type="button">Want to register?</button>
+  </mat-card>

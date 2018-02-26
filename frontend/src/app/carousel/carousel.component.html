@@ -1,0 +1,48 @@
+<ngu-carousel
+[inputs]="carouselTile"
+(initData)="initDataFn($event)"
+(carouselLoad)="carouselTileLoad($event)">
+
+    <ngu-item _ngcontent-c2="" ngucarouselitem="" _nghost-c12="" class="item ng-star-inserted" NguCarouselItem *ngFor="let product of  productService.products | async">
+      <mat-card _ngcontent-c2="" class="p-0 mat-card z-depth">
+          <img _ngcontent-c2="" class="mat-card-image" mat-card-image="" src="{{product.imageUrl}}">
+          <mat-card-content _ngcontent-c2="" class="mat-card-content">
+            <h5 _ngcontent-c2=""><strong _ngcontent-c2=""><a _ngcontent-c2="" href="">{{product.caption}}</a></strong>
+              <mat-divider _ngcontent-c2="" aria-orientation="horizontal" class="mb-1 mat-divider" role="separator"></mat-divider>
+            </h5>
+            <p _ngcontent-c2="">
+              {{product.summary}}
+            </p>
+          </mat-card-content>
+      </mat-card>
+    </ngu-item>
+    <button NguCarouselPrev class='leftRs mat-fab mat-accent' style='display: block;'>
+      <span class="mat-button-wrapper">
+        <mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">keyboard_arrow_left</mat-icon>
+      </span>
+      <div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""></div>
+      <div class="mat-button-focus-overlay"></div>
+    </button>
+    <button _ngcontent-c2 NguCarouselNext class='rightRs mat-fab mat-accent' style='display: block;'>
+      <span class="mat-button-wrapper">
+        <mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">keyboard_arrow_right</mat-icon>
+      </span>
+      <div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""></div>
+      <div class="mat-button-focus-overlay"></div>
+    </button>
+    
+<style _ngcontent-c15=""> @media (max-width:767px){.ngucarouselbzyKqJ > .ngucarousel > .ngucarousel-inner > .ngucarousel-items > .item {width: 100%}}
+  @media (min-width:768px){.ngucarouselbzyKqJ > .ngucarousel > .ngucarousel-inner > .ngucarousel-items > .item {width: 50%}}
+  @media (min-width:992px){.ngucarouselbzyKqJ > .ngucarousel > .ngucarousel-inner > .ngucarousel-items > .item {width: 33.333333333333336%}}
+  @media (min-width:1200px){.ngucarouselbzyKqJ > .ngucarousel > .ngucarousel-inner > .ngucarousel-items > .item {width: 33.333333333333336%}}</style>
+
+  <style _ngcontent-c15="">@media (max-width: 767px) {
+    .ngucarouselbzyKqJ > .ngucarousel > .ngucarousel-inner > .ngucarousel-items { transform: translate3d(-300%, 0, 0); } }
+  @media (min-width: 768px) {
+    .ngucarouselbzyKqJ > .ngucarousel > .ngucarousel-inner > .ngucarousel-items { transform: translate3d(-150%, 0, 0); } }
+  @media (min-width: 992px) {
+    .ngucarouselbzyKqJ > .ngucarousel > .ngucarousel-inner > .ngucarousel-items { transform: translate3d(-100%, 0, 0); } }
+  @media (min-width: 1200px) {
+    .ngucarouselbzyKqJ > .ngucarousel > .ngucarousel-inner > .ngucarousel-items { transform: translate3d(-100%, 0, 0); } }</style>
+</ngu-carousel>
+  <button mat-raised-button color="primary" style="top:40px; position: absolute" (click)="resetFn()"><mat-icon>keyboard_arrow_left</mat-icon> First Offer</button>

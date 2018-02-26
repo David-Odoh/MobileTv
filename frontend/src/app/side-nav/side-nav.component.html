@@ -1,0 +1,63 @@
+<!-- <mat-toolbar color="primary">
+  <button mat-button > Message Board</button>  
+  <button mat-button > Messages</button>
+  <span style="flex: 1 1 auto"></span>
+  <button  mat-button >Login</button>     
+</mat-toolbar> -->
+
+
+<ul class="main-nav">
+    <li style="list-style:none" mat-icon-button [matMenuTriggerFor]="menu" (click)="openMenu()">
+        <img src="../assets/images/nav-elements/Main_NavBar.png" style="width:100%; z-index: 1000; position:absolute; top:0px; left:0px;">
+    </li>
+</ul>
+  <mat-menu #menu="matMenu" class="drop-down" style="padding-top: -8px !important; padding-bottom: -8px !important;">
+      <button mat-menu-item class="drop-down" *ngIf="auth.isAuthenticated">
+        <span>Welcome</span>
+        <span>{{auth.name}}</span>
+      </button>
+    <mat-divider id="divider"></mat-divider>
+    <button mat-menu-item class="drop-down" routerLink="/">
+      <!-- <mat-icon id="icon-style1">dialpad</mat-icon> -->
+      <span>Home</span>
+    </button>
+    <button mat-menu-item  class="drop-down" *ngIf="!auth.isAuthenticated" routerLink="/login">
+      <!-- <mat-icon id="icon-style2">settings</mat-icon> -->
+      <span>Login</span>
+    </button>
+    <button mat-menu-item  class="drop-down" *ngIf="!auth.isAuthenticated" routerLink="/register">
+      <!-- <mat-icon id="icon-style2">settings</mat-icon> -->
+      <span>Register</span>
+    </button>
+    <button mat-menu-item [matMenuTriggerFor]="settings" *ngIf="auth.isAuthenticated" class="drop-down">
+      <!-- <mat-icon id="icon-style2">settings</mat-icon> -->
+      <span>Settings</span>
+    </button>
+    <mat-divider id="divider"></mat-divider>
+    <button mat-menu-item class="drop-down" *ngIf="auth.isAuthenticated" (click)="auth.logout()">
+      <!-- <mat-icon id="icon-style3">close</mat-icon> -->
+      <span>Logout</span>
+    </button>
+  </mat-menu>
+
+  <!-- Submenu for Settings  -->
+
+  <mat-menu #settings="matMenu" class="drop-down" style="padding-top: -8px !important; padding-bottom: -8px !important;">
+    <button mat-menu-item class="drop-down" routerLink="/manage-videos">
+      <!-- <mat-icon id="icon-style1">dialpad</mat-icon> -->
+      <span>Manage Videos</span>
+    </button>
+    <button mat-menu-item disabled class="drop-down">
+      <!-- <mat-icon id="icon-style2">settings</mat-icon> -->
+      <span>Manage Places (Disabled)</span>
+    </button>
+    <button mat-menu-item disabled class="drop-down">
+      <!-- <mat-icon id="icon-style2">settings</mat-icon> -->
+      <span>Manage Products (Disabled)</span>
+    </button>
+    <mat-divider id="divider"></mat-divider>
+    <button mat-menu-item disabled class="drop-down">
+      <!-- <mat-icon id="icon-style3">close</mat-icon> -->
+      <span>My Profile (Disabled)</span>
+    </button>
+  </mat-menu>

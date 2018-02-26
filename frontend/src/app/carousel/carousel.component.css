@@ -1,0 +1,298 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    background-color: rgb(226, 196, 196);
+    
+}
+
+
+ngu-carousel {
+    width:auto;
+    height:70%;
+
+}
+
+.mat-button-ripple-round {
+    border-radius: 50%;
+    z-index: 1;
+    }
+    button {
+      text-rendering: auto;
+      letter-spacing: normal;
+      word-spacing: normal;
+      text-transform: none;
+      text-indent: 0px;
+      text-shadow: none;
+    }
+  .mat-button-focus-overlay, .mat-button-ripple {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+  .mat-ripple {
+    overflow: hidden;
+}
+div {
+  display: block;
+  box-sizing: border-box;
+}
+
+  .mat-icon {
+    background-repeat: no-repeat;
+    display: inline-block;
+    fill: currentColor;
+    height: 24px;
+    width: 24px;
+  }
+
+  .mat-fab .mat-button-wrapper>* {
+    vertical-align: middle;
+  }
+
+  .mat-fab .mat-button-wrapper {
+    padding: 16px 0;
+    display: inline-block;
+    line-height: 24px;
+  }
+
+  .material-icons {
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+.mat-button, .mat-fab, .mat-icon-button, .mat-mini-fab, .mat-raised-button {
+  user-select: none;
+  cursor: pointer;
+  outline: 0;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  white-space: nowrap;
+  text-decoration: none;
+  vertical-align: baseline;
+  text-align: center;
+  line-height: 36px;
+  margin: 0;
+}
+
+.mat-button, .mat-fab, .mat-icon-button, .mat-mini-fab, .mat-raised-button {
+  font-family: Roboto,Helvetica Neue,sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+  .leftRs {
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      width: 50px;
+      height: 50px;
+      box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);
+      border-radius: 999px;
+      left: 0;
+  }
+
+  .rightRs {
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      width: 50px;
+      height: 50px;
+      box-shadow: 1px 2px 15px -2px rgba(0, 0, 0, .6);
+      border-radius: 999px;
+      right: 0;
+  }
+
+  .mat-fab.mat-accent, .mat-mini-fab.mat-accent, .mat-raised-button.mat-accent {
+    background-color: #FFFFFF;
+    color: #000000;
+  }
+
+  /* Carousel Item*/
+
+  @media (min-width: 1200px) {
+    .ngucarouselbzyKqJ > .ngucarousel > .ngucarousel-inner > .ngucarousel-items > .item {
+        width: 33.333333333333336%;
+    }
+  }
+
+  [_nghost-c12] {
+    display: inline-block;
+    white-space: initial;
+    vertical-align: top;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: .875rem;
+    color: rgba(0,0,0,.87);
+    line-height: 1.5;
+    font-family: Roboto,Helvetica Neue,sans-serif;
+}
+
+.item[_ngcontent-c2] .mat-card[_ngcontent-c2] {
+    margin: 0 16px;
+}
+
+.egret-indigo .mat-card {
+    background: #fff;
+    color: rgba(0,0,0,.87);
+}
+
+.mat-card {
+    transition: box-shadow 280ms cubic-bezier(.4,0,.2,1);
+    display: block;
+    position: relative;
+    border-radius: 2px;
+    overflow: hidden;
+    font-size: .875rem;
+}
+
+.p-0 {
+    padding: 0 !important;
+}
+.mat-button-toggle, .mat-card {
+    font-family: Roboto,Helvetica Neue,sans-serif;
+}
+
+.mat-card.p-0 .mat-card-image {
+    margin: 0 0 1rem!important;
+}
+
+.mat-card-image {
+    width: calc(100% + 48px);
+}
+
+img {
+    max-width: 100%;
+}
+ 
+.mat-card-content>:last-child:not(.mat-card-footer), .mat-card>:last-child:not(.mat-card-footer) {
+    margin-bottom: 0;
+}
+
+.mat-card.p-0 .mat-card-content {
+    padding: 0 1.5rem 1.5rem;
+}
+
+.mat-card-actions, .mat-card-content, .mat-card-subtitle, .mat-card-title {
+    display: block;
+}
+
+.mat-card-content, .mat-card-header .mat-card-title, .mat-card-subtitle {
+    font-size: 14px;
+}
+
+.egret-indigo .mat-card {
+    background: #fff;
+    color: rgba(0,0,0,.87);
+}
+
+a {
+    color: inherit;
+}
+a, a:focus, a:hover {
+    text-decoration: none;
+}
+a:-webkit-any-link {
+    cursor: pointer;
+}
+strong, b {
+    font-weight: bold;
+}
+.h5, h5 {
+    font-size: 1rem;
+}
+
+.ngucarousel[_ngcontent-c11] .ngucarousel-inner[_ngcontent-c11] .ngucarousel-items[_ngcontent-c11] {
+    white-space: nowrap;
+    position: relative;
+}
+@media (min-width: 1200px) {
+    .ngucarouselbzyKqJ > .ngucarousel > .ngucarousel-inner > .ngucarousel-items {
+        transform: translate3d(-0%, 0, 0);
+    }
+}
+
+.ngucarousel[_ngcontent-c11] .ngucarousel-inner[_ngcontent-c11] {
+    position: relative;
+    overflow: hidden;
+}
+
+.ngucarousel {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.ngucarouselPointDefault[_ngcontent-c5] .ngucarouselPoint[_ngcontent-c5] {
+    list-style-type: none;
+    text-align: center;
+    padding: 12px;
+    margin: 0;
+    white-space: nowrap;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+ul, menu, dir {
+    display: block;
+    /* list-style-type: disc; */
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+
+.ngucarouselPointDefault[_ngcontent-c15] .ngucarouselPoint[_ngcontent-c15] li[_ngcontent-c15] {
+    display: inline-block;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.55);
+    padding: 4px;
+    margin: 0 4px;
+    transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+    transition: 0.4s;
+}
+
+.ngucarouselPointDefault[_ngcontent-c15] .ngucarouselPoint[_ngcontent-c15] li.active[_ngcontent-c15] {
+    background: #6b6b6b;
+    transform: scale(1.8);
+}
+
+li {
+    text-align: -webkit-match-parent;
+}
+
+.z-depth:hover {
+    box-shadow: 0 8px 8px 8px rgba(0,0,0,.2), 0 8px 8px 0 rgba(0,0,0,.14), 0 8px 8px 0 rgba(0,0,0,.12) !important;
+    transform: translate3d(0,0,0);
+    transition: background .4s cubic-bezier(.25,.8,.25,1),box-shadow 280ms cubic-bezier(.4,0,.2,1);
+}
+
+/* .mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+} */
+
+mat-divider {
+    margin-top: 6px;
+}

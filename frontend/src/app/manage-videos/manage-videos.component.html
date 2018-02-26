@@ -1,0 +1,34 @@
+<div class="wide videoContainer" style="height:50%;">
+<!-- Nav bar -->
+<mat-toolbar color="accent">
+        <h1>Admin Area : &nbsp;&nbsp; Manage Playlist</h1>        
+        <span style="flex: 1 1 auto"></span>
+        <button mat-button *ngIf="auth.isAuthenticated"> Hi {{auth.name}}</button>    
+        <button  mat-button (click)="auth.logout()" *ngIf="auth.isAuthenticated"> Logout</button>      
+</mat-toolbar>
+ <!-- Add Video Form  -->
+    <div class="container" style="z-index: 2000">
+            <mat-card class="card" style="z-index: 2000">
+                <mat-card-title>
+                    <h2>Add Video</h2>
+                </mat-card-title>
+              <mat-card-content style="width: 350px">
+                    <mat-input-container style="width: 350px; float:left">
+                    <input matInput placeholder="Specify Video Category" style="width: 350px">
+                    </mat-input-container> 
+                    <br>
+                    <button mat-raised-button color="accent" (click)="inputFile.click()">Upload file</button>
+                    <button mat-button (click)="doNothing()">Click here if file path isn't visible</button>{{ inputFile.value }}
+                    <input #inputFile type="file" [style.display]="'none'"> 
+              </mat-card-content>
+              <br> 
+              <button [routerLink]="['/manage-videos', videoService.url]" (click)="post()"  mat-raised-button color="accent">Add to list</button>
+            </mat-card>     
+    </div> 
+</div>
+<div style="height:50%; overflow:scroll; width: 100%;">
+    <!-- ADDING THE LIST OF VIDEOS FROM DATABASE -->
+    <app-videos></app-videos>
+</div>
+
+           

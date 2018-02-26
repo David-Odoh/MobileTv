@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(226, 196, 196);
+    
+}
+
+
+video {
+    width:100%;
+    height:auto;
+
+}
